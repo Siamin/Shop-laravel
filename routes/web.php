@@ -119,3 +119,6 @@ Route::resource('/Admin/setting/aboutUs', 'Admin\ShopSettingController');
 Route::get('/Admin/setting/support', function () {
     return view('admin.settings.support');
 });
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

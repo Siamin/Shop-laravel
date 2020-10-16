@@ -95,7 +95,6 @@
         border-radius: 3px;
     }
 
-    #login fieldset input[type="text"],
     #login fieldset input[type="email"],
     #login fieldset input[type="password"] {
         background: #eee;

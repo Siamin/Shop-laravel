@@ -7,34 +7,50 @@
 @section('content')
 <div id="login">
 
-    <h2><span class="fontawesome-pencil"></span>Sign up</h2>
+    <h2><span class="fontawesome-pencil"></span>{{ __('Register') }}</h2>
 
-    <form action="#" method="POST">
+    <form method="POST" action="{{ route('register') }}">
+        @csrf
 
         <fieldset>
 
-            <p><label for="firstname">First name</label></p>
-            <p><input type="email" name="firstName" placeholder="First name"></p>
+            <p><label for="firstname">{{ __('Name') }}</label></p>
+            <p><input type="text" name="name" value="{{ old('name') }}"></p>
+            @error('name')
+            <span class="invalid-feedback" role="alert">
+                <strong>{{ $message }}</strong>
+            </span>
+            @enderror
 
-            <p><label for="lastname">Last name</label></p>
-            <p><input type="email" name="LastName" placeholder="Last name"></p>
 
-            <p><label for="email">E-mail address</label></p>
-            <p><input type="email" placeholder="mail@address.com"></p>
+            <p><label for="lastname">{{ __('E-Mail Address') }}</label></p>
+            <p><input type="email" name="email" value="{{ old('email') }}"></p>
+            @error('email')
+            <span class="invalid-feedback" role="alert">
+                <strong>{{ $message }}</strong>
+            </span>
+            @enderror
 
-            <p><label for="password">Password</label></p>
-            <p><input type="password" name="password" placeholder="Password" /></p>
 
-            <p><label for="password">Retype password</label></p>
-            <p><input type="password" name="password2" placeholder="Retype password" /></p>
+            <p><label for="email">{{ __('Password') }}</label></p>
+            <p><input type="password" name="password" required autocomplete="new-password"></p>
+            @error('password')
+            <span class="invalid-feedback" role="alert">
+                <strong>{{ $message }}</strong>
+            </span>
+            @enderror
+
+
+            <p><label for="password">{{ __('Confirm Password') }}</label></p>
+            <p><input type="password" name="password_confirmation" required autocomplete="new-password" /></p>
 
             </br>
 
             <div class="form-group row">
                 <div class="text-right col-md-4">
                     <p class="btn-position">
-                        <button type="submit" name="button" value="newUser" class="btn btn-space btn-warning">Sign
-                            Up</button>
+                        <button type="submit" name="button" value="newUser"
+                            class="btn btn-space btn-warning">{{ __('Register') }}</button>
                     </p>
                 </div>
             </div>

@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Shop;
 
+use Illuminate\Http\Request;
+
 use App\Blog;
 use App\Category;
 use App\Http\Controllers\Controller;
@@ -10,6 +12,9 @@ use App\Slider;
 
 class indexController extends Controller
 {
+
+    
+
     /**
      * Display a listing of the resource.
      *

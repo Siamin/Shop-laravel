@@ -61,7 +61,29 @@
                         <div class="col-lg-6 col-md-6 col-sm-7 hidden-xs">
                             <div class="top-header-menu left-menu">
                                 <ul>
-                                    <li><a href="{{url('/SignIn')}}">Login</a></li>
+                                    @guest
+                                    <li><a href="{{url('/SignIn')}}">{{ __('Login') }}</a></li>
+                                    @else
+                                    <li class="nav-item dropdown">
+                                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                            {{ Auth::user()->name }}
+                                        </a>
+
+
+                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                            <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                                {{ __('Logout') }}
+                                            </a>
+                                            <a href="{{url('/SignIn')}}">panel</a>
+                                            <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                                class="d-none">
+                                                @csrf
+                                            </form>
+                                        </div>
+                                    </li>
+                                    @endguest
                                     <li><a href="{{url('/AboutUs')}}">About Us</a></li>
                                 </ul>
                             </div>
