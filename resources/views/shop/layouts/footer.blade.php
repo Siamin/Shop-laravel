@@ -5,6 +5,42 @@
             <div class="row">
                 <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
                     <div class="footer-top-text">
+                        <div class="footer-top-menu">
+                            <h4>{{ __('ارتباط با ما') }}</h4>
+                        </div>
+                        <ul style="direction:rtl;">
+                            <li><i class="fa fa-map-marker"></i>{{$DataShop['adress']}} :آدرس</li>
+                            <li><i class="fa fa-phone"></i>{{$DataShop['phone']}} :تلفن</li>
+                            <li><i class="fa fa-envelope-o"></i>{{$DataShop['email']}} :ایمیل</li>
+                        </ul>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+                    <div class="footer-top-menu">
+                        <!--h4>customer care</h4>
+                        <ul>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">SiteMap</a></li>
+                            <li><a href="#">Term & Conditions</a></li>
+                            <li><a href="#">Gift & Vourchers</a></li>
+                        </ul-->
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 hidden-sm col-xs-12">
+                    <div class="footer-top-menu">
+                        <!--h4>service center</h4>
+                        <ul>
+                            <li><a href="#">Our Blog</a></li>
+                            <li><a href="#">About Our Shop</a></li>
+                            <li><a href="#">Secure Shopping</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul-->
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+                    <div class="footer-top-text" style="direction:rtl;">
                         <img src="/upload/image/Shop/{{$DataShop['image']}}" alt="">
                         <p>{{$DataShop['briefDescription']}}</p>
                         <div class="footer-icons">
@@ -30,41 +66,6 @@
                                 data-placement="top" title="Linkedin"><i class="fa fa-linkedin"></i></a>
                             @endif
                         </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
-                    <div class="footer-top-menu">
-                        <!--h4>customer care</h4>
-                        <ul>
-                            <li><a href="#">Contact Us</a></li>
-                            <li><a href="#">SiteMap</a></li>
-                            <li><a href="#">Term & Conditions</a></li>
-                            <li><a href="#">Gift & Vourchers</a></li>
-                        </ul-->
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-3 hidden-sm col-xs-12">
-                    <div class="footer-top-menu">
-                        <!--h4>service center</h4>
-                        <ul>
-                            <li><a href="#">Our Blog</a></li>
-                            <li><a href="#">About Our Shop</a></li>
-                            <li><a href="#">Secure Shopping</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                        </ul-->
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
-                    <div class="footer-top-text">
-                        <div class="footer-top-menu">
-                            <h4>{{ __('Contact us') }}</h4>
-                        </div>
-                        <ul>
-                            <li><i class="fa fa-map-marker"></i>Adress: {{$DataShop['adress']}}</li>
-                            <li><i class="fa fa-phone"></i>Phone: {{$DataShop['phone']}}</li>
-                            <li><i class="fa fa-envelope-o"></i>Email: {{$DataShop['email']}}</li>
-                        </ul>
-
                     </div>
                 </div>
             </div>

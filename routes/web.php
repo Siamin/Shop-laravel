@@ -8,6 +8,7 @@ use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\BlogShopController;
 use App\Http\Controllers\Admin\ShopSettingController;
+use App\Http\Controllers\Admin\UserController;
 
 
 /*
@@ -80,17 +81,7 @@ Route::resource('/Admin/dashbord', 'Admin\AdminController');
 
 //**************** users *******************/
 
-Route::get('/Admin/Users/tables', function () {
-    return view('admin.users.index');
-});
-
-Route::get('/Admin/Users/new', function () {
-    return view('admin.users.add');
-});
-
-Route::get('/Admin/Users/edit', function () {
-    return view('admin.users.edit');
-});
+Route::resource('/Admin/Users', 'Admin\UserController');
 
 //**************** blogs ******************/
 Route::resource('/Admin/blogs', 'Admin\BlogController');

@@ -26,10 +26,10 @@
                         <div id="submenu-2" class="collapse submenu" style="">
                             <ul class="nav flex-column">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{url('Admin/Users/tables')}}">Users Show</a>
+                                    <a class="nav-link" href="{{route('Users.index')}}">Users Show</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{url('Admin/Users/new')}}">User Add</a>
+                                    <a class="nav-link" href="{{route('Users.create')}}">User Add</a>
                                 </li>
                             </ul>
                         </div>

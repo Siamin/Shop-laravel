@@ -62,29 +62,29 @@
                             <div class="top-header-menu left-menu">
                                 <ul>
                                     @guest
-                                    <li><a href="{{url('/SignIn')}}">{{ __('Login') }}</a></li>
+                                    <li><a href="{{url('/SignIn')}}">{{ __('ورود') }}</a></li>
                                     @if (Route::has('register'))
                                     <li class="nav-item">
-                                        <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                        <a class="nav-link" href="{{ route('register') }}">{{ __('ثبت نام') }}</a>
                                     </li>
                                     @endif
                                     @else
                                     <li class="nav-item dropdown">
                                         <a id="navbarDropdown" class="nav-link dropdown-toggle" role="button"
                                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                            {{ __('Hi') }} {{ Auth::user()->name }}
+                                            {{ Auth::user()->name }}
                                         </a>
 
 
-                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                        <div class="dropdown-menu dropdown-menu-left">
                                             @if(\Auth::user()->checkRole())
-                                            <a style="color:#F15B22;" href="{{url('/Admin/dashbord')}}">admin panel</a>
+                                            <a style="color:#F15B22;" href="{{url('/Admin/dashbord')}}">پنل مدیریت</a>
                                             @else
-                                            <a style="color:#F15B22;" href="{{url('/')}}">panel</a>
+                                            <a style="color:#F15B22;" href="{{url('/')}}">پنل کاربری</a>
                                             @endif
                                             <a style="color:#F15B22;" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                                {{ __('Logout') }}
+                                                {{ __('خروج از حساب کاربری') }}
                                             </a>
 
                                             <form id="logout-form" action="{{ route('logout') }}" method="POST"
@@ -161,7 +161,7 @@
                                 <!-- search option start -->
                                 <form action="#">
                                     <div class="search-option search-option-2">
-                                        <input type="text" placeholder="Search...">
+                                        <input type="text" placeholder="...جستجو">
                                         <button class="button" type="submit"><i class="fa fa-search"></i></button>
                                     </div>
                                 </form>
@@ -181,11 +181,11 @@
                         <div class="col-lg-12 col-md-12 col-sm-12">
                             <!-- main-menu start -->
                             <div class="main-menu">
-                                <nav style="direction:rtl;">
+                                <nav>
                                     <ul>
-                                        <li><a href="{{url('/')}}">{{ __('Home') }}</a></li>
+                                        <li><a href="{{url('/')}}">{{ __('صفحه اصلی') }}</a></li>
 
-                                        <li><a href="{{url('/ProductList')}}">{{ __('Products') }}</a>
+                                        <li><a href="{{url('/ProductList')}}">{{ __('محصولات') }}</a>
 
                                             <!-- mega menu start -->
                                             <div class="mega-menu">
@@ -210,10 +210,11 @@
                                             <!-- mega menu end -->
                                         </li>
 
-                                        <li><a href="{{route('ShopBlog.index')}}">{{ __('blog') }}</a></li>
+                                        <li><a href="{{route('ShopBlog.index')}}">{{ __('بلاگ ها') }}</a></li>
 
-                                        <li><a href="{{url('/ContactUs')}}">{{ __('Contact us') }}</a></li>
-                                        <li><a href="{{url('/AboutUs')}}">{{ __('About Us') }}</a></li>
+                                        <li><a href="{{url('/ContactUs')}}">{{ __('ارتباط با ما') }}</a></li>
+
+                                        <li><a href="{{url('/AboutUs')}}">{{ __('در باره ما') }}</a></li>
 
                                     </ul>
                                 </nav>

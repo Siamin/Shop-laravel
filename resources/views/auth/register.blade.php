@@ -1,29 +1,37 @@
 @extends ('auth.layouts.master')
 
 @section('title')
-<title>Sign Up</title>
+<title>ثبت نام</title>
 @endsection
 
 @section('content')
 <div id="login">
 
-    <h2><span class="fontawesome-pencil"></span>{{ __('Register') }}</h2>
+    <h2 style="direction:rtl;"><span class="fontawesome-pencil"> </span>{{ __('ثبت نام') }}</h2>
 
     <form method="POST" action="{{ route('register') }}">
         @csrf
 
         <fieldset>
 
-            <p><label for="firstname">{{ __('Name') }}</label></p>
-            <p><input type="text" name="name" value="{{ old('name') }}"></p>
+            <p style="direction:rtl;"><label for="firstname">{{ __('نام') }}</label></p>
+            <p style="direction:rtl;"><input type="text" name="name" value="{{ old('name') }}"></p>
             @error('name')
             <span class="invalid-feedback" role="alert">
                 <strong>{{ $message }}</strong>
             </span>
             @enderror
 
+            <p style="direction:rtl;"><label for="lastname">{{ __('نام خانوادگی') }}</label></p>
+            <p style="direction:rtl;"><input type="text" name="lastname" value="{{ old('lastname') }}"></p>
+            @error('lastname')
+            <span class="invalid-feedback" role="alert">
+                <strong>{{ $message }}</strong>
+            </span>
+            @enderror
 
-            <p><label for="lastname">{{ __('E-Mail Address') }}</label></p>
+
+            <p style="direction:rtl;"><label for="lastname">{{ __('ایمیل') }}</label></p>
             <p><input type="email" name="email" value="{{ old('email') }}"></p>
             @error('email')
             <span class="invalid-feedback" role="alert">
@@ -32,7 +40,7 @@
             @enderror
 
 
-            <p><label for="email">{{ __('Password') }}</label></p>
+            <p style="direction:rtl;"><label for="email">{{ __('رمز عبور') }}</label></p>
             <p><input type="password" name="password" required autocomplete="new-password"></p>
             @error('password')
             <span class="invalid-feedback" role="alert">
@@ -41,16 +49,16 @@
             @enderror
 
 
-            <p><label for="password">{{ __('Confirm Password') }}</label></p>
+            <p style="direction:rtl;"><label for="password">{{ __('تکرار رمز عبور') }}</label></p>
             <p><input type="password" name="password_confirmation" required autocomplete="new-password" /></p>
 
             </br>
 
             <div class="form-group row">
-                <div class="text-right col-md-4">
+                <div style="direction:rtl;" class="text-right col-md-4">
                     <p class="btn-position">
                         <button type="submit" name="button" value="newUser"
-                            class="btn btn-space btn-warning">{{ __('Register') }}</button>
+                            class="btn btn-space btn-warning">{{ __('ثبت نام') }}</button>
                     </p>
                 </div>
             </div>
