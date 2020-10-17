@@ -15,4 +15,8 @@ class Blog extends Model
     public function getDescription(){
         return substr($this->Description,0,150);
     }
+
+    public function CategoryModel(){
+        return $this->blongsTo('App\Category');
+        }
 }

@@ -110,8 +110,7 @@
                 <div class="col-md-12">
                     <div class="area-headding text-center">
                         <h2 class="section-title">Meet Our Teachers</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla varius consequat magna,
-                            id<br> molestie ipsum volutpat quis. Suspendisse consectetur fringilla suctus.</p>
+                        <p>{{$DataShop['TeamTitle']}}</p>
                     </div>
                 </div>
             </div>

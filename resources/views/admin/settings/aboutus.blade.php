@@ -214,8 +214,6 @@
                                         </div>
                                     </div>
 
-
-
                                     <div class="form-group row">
                                         <!-- ========================file====================================== -->
                                         <div class="col-md-12">
@@ -232,6 +230,23 @@
 
 
                                     </div>
+
+                                    <div class="form-group row">
+                                        <!-- ======================== TeamTitle ====================================== -->
+                                        <div class="col-md-12">
+                                            <div class="row">
+                                                <div class="col-2 col-md-2 col-lg-2 labelPosition">
+                                                    <label for="inputEmail2">Team Title :</label>
+                                                </div>
+                                                <div class="col-10 col-md-10 col-lg-10">
+                                                    <textarea id="inputEmail2" type="tel" required="" name="TeamTitle"
+                                                        placeholder="Team description" class="form-control" rows="3"
+                                                        cols="50">{{$setting['TeamTitle']}}</textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
                                     <div class="form-group row">
                                         <div class="text-right col-md-12">
                                             <p class="btn-position">

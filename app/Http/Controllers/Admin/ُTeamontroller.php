@@ -7,6 +7,9 @@ use Illuminate\Http\Request;
 
 class ُTeamontroller extends Controller
 {
+    public function __construct(){
+        $this->middleware('isAdmin');
+    }
     /**
      * Display a listing of the resource.
      *

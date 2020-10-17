@@ -63,20 +63,30 @@
                                 <ul>
                                     @guest
                                     <li><a href="{{url('/SignIn')}}">{{ __('Login') }}</a></li>
+                                    @if (Route::has('register'))
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    </li>
+                                    @endif
                                     @else
                                     <li class="nav-item dropdown">
-                                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
+                                        <a id="navbarDropdown" class="nav-link dropdown-toggle" role="button"
                                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                            {{ Auth::user()->name }}
+                                            {{ __('Hi') }} {{ Auth::user()->name }}
                                         </a>
 
 
                                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                            <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                            @if(\Auth::user()->checkRole())
+                                            <a style="color:#F15B22;" href="{{url('/Admin/dashbord')}}">admin panel</a>
+                                            @else
+                                            <a style="color:#F15B22;" href="{{url('/')}}">panel</a>
+                                            @endif
+                                            <a style="color:#F15B22;" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                                 {{ __('Logout') }}
                                             </a>
-                                            <a href="{{url('/SignIn')}}">panel</a>
+
                                             <form id="logout-form" action="{{ route('logout') }}" method="POST"
                                                 class="d-none">
                                                 @csrf
@@ -84,7 +94,7 @@
                                         </div>
                                     </li>
                                     @endguest
-                                    <li><a href="{{url('/AboutUs')}}">About Us</a></li>
+
                                 </ul>
                             </div>
                         </div>
@@ -171,11 +181,11 @@
                         <div class="col-lg-12 col-md-12 col-sm-12">
                             <!-- main-menu start -->
                             <div class="main-menu">
-                                <nav>
+                                <nav style="direction:rtl;">
                                     <ul>
-                                        <li><a href="{{url('/')}}">home</a></li>
+                                        <li><a href="{{url('/')}}">{{ __('Home') }}</a></li>
 
-                                        <li><a href="{{url('/ProductList')}}">Products</a>
+                                        <li><a href="{{url('/ProductList')}}">{{ __('Products') }}</a>
 
                                             <!-- mega menu start -->
                                             <div class="mega-menu">
@@ -200,9 +210,11 @@
                                             <!-- mega menu end -->
                                         </li>
 
-                                        <li><a href="{{route('ShopBlog.index')}}">blog</a></li>
+                                        <li><a href="{{route('ShopBlog.index')}}">{{ __('blog') }}</a></li>
 
-                                        <li><a href="{{url('/ContactUs')}}">contact us</a></li>
+                                        <li><a href="{{url('/ContactUs')}}">{{ __('Contact us') }}</a></li>
+                                        <li><a href="{{url('/AboutUs')}}">{{ __('About Us') }}</a></li>
+
                                     </ul>
                                 </nav>
                             </div>

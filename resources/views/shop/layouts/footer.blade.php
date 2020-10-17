@@ -57,7 +57,7 @@
                 <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
                     <div class="footer-top-text">
                         <div class="footer-top-menu">
-                            <h4>contact us</h4>
+                            <h4>{{ __('Contact us') }}</h4>
                         </div>
                         <ul>
                             <li><i class="fa fa-map-marker"></i>Adress: {{$DataShop['adress']}}</li>
