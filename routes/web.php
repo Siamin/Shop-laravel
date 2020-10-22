@@ -1,15 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Admin\SliderController;
-use App\Http\Controllers\Admin\CategoryController;
-use App\Http\Controllers\Admin\BlogController;
-use App\Http\Controllers\Admin\ProductController;
-use App\Http\Controllers\Admin\AdminController;
-use App\Http\Controllers\Admin\BlogShopController;
-use App\Http\Controllers\Admin\ShopSettingController;
-use App\Http\Controllers\Admin\UserController;
-
 
 /*
 |--------------------------------------------------------------------------
@@ -28,13 +19,13 @@ Route::get('/', 'Shop\indexController@index');
 //***************   shop   ****************/
 //*****************************************/
 //*****************************************/
-Route::resource('/ShopBlog','Shop\BlogShopController');
+Route::resource('/ShopBlog', 'Shop\BlogShopController');
 
-Route::get('/ContactUs','Shop\indexController@ContactUs');
+Route::get('/ContactUs', 'Shop\indexController@ContactUs');
 
 Route::get('/AboutUs', 'Shop\indexController@AboutUs');
 
-Route::get('/ProductList','Shop\indexController@ProductList');
+Route::get('/ProductList', 'Shop\indexController@ProductList');
 
 Route::get('/SingleProduct/{id}', 'Shop\indexController@SingleProduct');
 
@@ -78,6 +69,7 @@ Route::get('/panel', function () {
 //*****************************************/
 
 Route::resource('/Admin/dashbord', 'Admin\AdminController');
+Route::resource('/Admin/profile', 'Admin\ProfileController');
 
 //**************** users *******************/
 

@@ -47,6 +47,22 @@
     </div>
 </div>
 
+<script>
+var loadFile = function(event) {
+    var reader = new FileReader();
+    reader.onload = function() {
+        var output = document.getElementById('imgProfile');
+        output.src = reader.result;
+    };
+    reader.readAsDataURL(event.target.files[0]);
+    // document.myForm.submit();
+    // event.preventDefault();
+};
+
+function getFile() {
+    document.getElementById("upfile").click();
+}
+</script>
 
 @isset($message)
 <script>

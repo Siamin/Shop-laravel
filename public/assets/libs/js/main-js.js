@@ -1,10 +1,5 @@
 
 jQuery(document).ready(function($) {
-    
-    
-    $(".dataTables_filter").click(function(){
-        alert("jkkj");
-    })
     'use strict';
 
     // ============================================================== 
