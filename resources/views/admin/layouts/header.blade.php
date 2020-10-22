@@ -71,8 +71,8 @@
 
             <li class="nav-item dropdown nav-user">
                 <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false"><img src="/img/about/ab1.jpg" alt=""
-                        class="user-avatar-md rounded-circle"></a>
+                    aria-haspopup="true" aria-expanded="false"><img src="/upload/image/users/{{Auth::user()->photo}}"
+                        alt="" class="user-avatar-md rounded-circle"></a>
                 <div class="dropdown-menu dropdown-menu-right nav-user-dropdown"
                     aria-labelledby="navbarDropdownMenuLink2">
                     <div class="nav-user-info">

@@ -38,6 +38,15 @@
         min-height: 100%;
     }
 
+    select {
+        background-image: none;
+        border: none;
+        font: inherit;
+        margin: 0;
+        padding: 0;
+        transition: all 0.3s;
+    }
+
     input {
         background-image: none;
         border: none;
@@ -95,6 +104,7 @@
         border-radius: 3px;
     }
 
+    #login fieldset select,
     #login fieldset input[type="text"],
     #login fieldset input[type="email"],
     #login fieldset input[type="password"] {

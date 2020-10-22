@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\User;
+use App\role;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -15,8 +17,9 @@ class UserController extends Controller
     public function index()
     {
         $setting = $this->getDataShop();
-
-        return view('admin.users.index',compact('setting'));
+        $users = User::latest()->get();
+        
+        return view('admin.users.index', compact('setting', 'users'));
 
     }
 
@@ -28,8 +31,9 @@ class UserController extends Controller
     public function create()
     {
         $setting = $this->getDataShop();
-
-        return view('admin.users.add',compact('setting'));
+        $roles = role::all();
+        
+        return view('admin.users.add', compact('setting','roles'));
 
     }
 
@@ -63,9 +67,11 @@ class UserController extends Controller
      */
     public function edit($id)
     {
+        $user = User::find($id);
         $setting = $this->getDataShop();
-
-        return view('admin.users.edit',compact('setting'));
+        $roles = role::all();
+        
+        return view('admin.users.edit', compact('setting', 'user','roles'));
     }
 
     /**
@@ -75,7 +81,7 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request,User $user)
     {
         //
     }
@@ -88,6 +94,13 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $user = User::find($id);
+        if($user->photo!="avatar.png"){
+           $this->DeleteFile($Product->image, 'users'); 
+        }
+        $user->delete();
+        return redirect()->route('Users.index');
+
     }
 }
+    

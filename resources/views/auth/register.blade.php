@@ -30,6 +30,21 @@
             </span>
             @enderror
 
+            <p style="direction:rtl;"><label for="gender">{{ __('جنسیت') }}</label></p>
+            <p>
+                <select name="gender" class="form-control">
+                    <option value="0"><i class="fa fa-mars" aria-hidden="true" style='font-size:24px;'></i>زن</option>
+
+                    <option value="1"><i class="fa fa-mars" aria-hidden="true" style='font-size:24px;'></i>مرد
+                    </option>
+
+                </select>
+            </p>
+            @error('gender')
+            <span class="invalid-feedback" role="alert">
+                <strong>{{ $message }}</strong>
+            </span>
+            @enderror
 
             <p style="direction:rtl;"><label for="lastname">{{ __('ایمیل') }}</label></p>
             <p><input type="email" name="email" value="{{ old('email') }}"></p>
