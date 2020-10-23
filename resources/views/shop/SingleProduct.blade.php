@@ -30,48 +30,48 @@
                                 <div class="simpleLens-container tab-content">
                                     <div class="tab-pane active" id="p-view-1">
                                         <div class="simpleLens-big-image-container">
-                                            <a class="simpleLens-lens-image" data-lens-image="img/product/sb-1.jpg">
-                                                <img src="img/product/sp-1.jpg" class="simpleLens-big-image"
+                                            <a class="simpleLens-lens-image" data-lens-image="../img/product/sb-1.jpg">
+                                                <img src="../img/product/sp-1.jpg" class="simpleLens-big-image"
                                                     alt="productd">
                                             </a>
                                         </div>
                                     </div>
                                     <div class="tab-pane" id="p-view-2">
                                         <div class="simpleLens-big-image-container">
-                                            <a class="simpleLens-lens-image" data-lens-image="img/product/sb-2.jpg">
-                                                <img src="img/product/sp-2.jpg" class="simpleLens-big-image"
+                                            <a class="simpleLens-lens-image" data-lens-image="../img/product/sb-2.jpg">
+                                                <img src="../img/product/sp-2.jpg" class="simpleLens-big-image"
                                                     alt="productd">
                                             </a>
                                         </div>
                                     </div>
                                     <div class="tab-pane" id="p-view-3">
                                         <div class="simpleLens-big-image-container">
-                                            <a class="simpleLens-lens-image" data-lens-image="img/product/sb-3.jpg">
-                                                <img src="img/product/sp-3.jpg" class="simpleLens-big-image"
+                                            <a class="simpleLens-lens-image" data-lens-image="../img/product/sb-3.jpg">
+                                                <img src="../img/product/sp-3.jpg" class="simpleLens-big-image"
                                                     alt="productd">
                                             </a>
                                         </div>
                                     </div>
                                     <div class="tab-pane" id="p-view-4">
                                         <div class="simpleLens-big-image-container">
-                                            <a class="simpleLens-lens-image" data-lens-image="img/product/sb-4.jpg">
-                                                <img src="img/product/sp-4.jpg" class="simpleLens-big-image"
+                                            <a class="simpleLens-lens-image" data-lens-image="../img/product/sb-4.jpg">
+                                                <img src="../img/product/sp-4.jpg" class="simpleLens-big-image"
                                                     alt="productd">
                                             </a>
                                         </div>
                                     </div>
                                     <div class="tab-pane" id="p-view-5">
                                         <div class="simpleLens-big-image-container">
-                                            <a class="simpleLens-lens-image" data-lens-image="img/product/sb-5.jpg">
-                                                <img src="img/product/sp-5.jpg" class="simpleLens-big-image"
+                                            <a class="simpleLens-lens-image" data-lens-image="../img/product/sb-5.jpg">
+                                                <img src="../img/product/sp-5.jpg" class="simpleLens-big-image"
                                                     alt="productd">
                                             </a>
                                         </div>
                                     </div>
                                     <div class="tab-pane" id="p-view-6">
                                         <div class="simpleLens-big-image-container">
-                                            <a class="simpleLens-lens-image" data-lens-image="img/product/sb-6.jpg">
-                                                <img src="img/product/sp-6.jpg" class="simpleLens-big-image"
+                                            <a class="simpleLens-lens-image" data-lens-image="../img/product/sb-6.jpg">
+                                                <img src="../img/product/sp-6.jpg" class="simpleLens-big-image"
                                                     alt="productd">
                                             </a>
                                         </div>
@@ -82,20 +82,20 @@
                                     <div id="single-product" class="owl-carousel custom-carousel">
                                         <ul class="nav nav-tabs" role="tablist">
                                             <li class="active"><a href="#p-view-1" role="tab" data-toggle="tab"><img
-                                                        src="img/product/ss-1.jpg" alt="productd"></a></li>
+                                                        src="../img/product/ss-1.jpg" alt="productd"></a></li>
                                             <li class="last-li"><a href="#p-view-2" role="tab" data-toggle="tab"><img
-                                                        src="img/product/ss-2.jpg" alt="productd"></a></li>
+                                                        src="../img/product/ss-2.jpg" alt="productd"></a></li>
                                             <li class="hidden-md hidden-xs hidden-sm"><a href="#p-view-3" role="tab"
-                                                    data-toggle="tab"><img src="img/product/ss-3.jpg"
+                                                    data-toggle="tab"><img src="../img/product/ss-3.jpg"
                                                         alt="productd"></a></li>
                                         </ul>
                                         <ul class="nav nav-tabs" role="tablist">
                                             <li class=""><a href="#p-view-4" role="tab" data-toggle="tab"><img
-                                                        src="img/product/ss-4.jpg" alt="productd"></a></li>
+                                                        src="../img/product/ss-4.jpg" alt="productd"></a></li>
                                             <li class="last-li"><a href="#p-view-5" role="tab" data-toggle="tab"><img
-                                                        src="img/product/ss-5.jpg" alt="productd"></a></li>
+                                                        src="../img/product/ss-5.jpg" alt="productd"></a></li>
                                             <li class="hidden-md hidden-xs hidden-sm"><a href="#p-view-6" role="tab"
-                                                    data-toggle="tab"><img src="img/product/ss-6.jpg"
+                                                    data-toggle="tab"><img src="../img/product/ss-6.jpg"
                                                         alt="productd"></a></li>
                                         </ul>
                                     </div>

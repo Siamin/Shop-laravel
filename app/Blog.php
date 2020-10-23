@@ -18,5 +18,10 @@ class Blog extends Model
 
     public function CategoryModel(){
         return $this->blongsTo('App\Category');
-        }
+    }
+
+    public function User(){
+        return $this->belongsTo('App\User', 'userId');
+    }
+
 }

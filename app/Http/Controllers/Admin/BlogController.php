@@ -54,6 +54,7 @@ class BlogController extends Controller
         $blog->CategorId = $request->get('CategorId');
         $blog->Tags = $request->get('Tags');
         $blog->Status = $request->get('Status');
+        $blog->userId = \Auth::user()->id;
         $blog->Image = $image;
         $blog->save();
 

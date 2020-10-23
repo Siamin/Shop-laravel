@@ -26,8 +26,9 @@ Route::get('/ContactUs', 'Shop\indexController@ContactUs');
 Route::get('/AboutUs', 'Shop\indexController@AboutUs');
 
 Route::get('/ProductList', 'Shop\indexController@ProductList');
+Route::get('/ProductList/{id}', 'Shop\indexController@ProductListShow')->name('ProductList.show');
 
-Route::get('/SingleProduct/{id}', 'Shop\indexController@SingleProduct');
+Route::get('/SingleProduct/{id}', 'Shop\indexController@SingleProduct')->name('Product.show');
 
 Route::get('/CheckOut', 'Shop\indexController@CheckOut');
 

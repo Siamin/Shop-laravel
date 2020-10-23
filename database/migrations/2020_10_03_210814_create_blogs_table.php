@@ -18,6 +18,7 @@ class CreateBlogsTable extends Migration
             $table->string('Title');
             $table->string('Description');
             $table->integer('CategorId');
+            $table->integer('userId');
             $table->string('Tags');
             $table->string('Image');
             $table->string('Status');
