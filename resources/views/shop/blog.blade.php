@@ -13,69 +13,39 @@
                 <div class="shop-head">
                     <ul class="shop-head-menu">
                         <li><i class="fa fa-home"></i><a class="home" href="#"><span>Home</span></a></li>
-                        <li>Blog Details</li>
+                        <li>Blog</li>
                     </ul>
                 </div><!-- shop head end -->
                 <!-- single-blog start -->
                 <article class="blog-post-wrapper">
                     <div class="post-thumbnail">
-                        <img src="img/blog/blog11.jpg" alt="" />
+                        <img src="/upload/image/blog/{{$blog->Image}}" alt="" />
                     </div>
                     <div class="post-information">
-                        <h2>Blog image post layout</h2>
+                        <h2>{{$blog->Title}}</h2>
                         <div class="entry-meta">
-                            <span class="author-meta"><i class="fa fa-user"></i> <a href="#">admin</a></span>
-                            <span><i class="fa fa-clock-o"></i> November 28, 2014</span>
-                            <span class="tag-meta">
+                            <span class="author-meta"><i class="fa fa-user"></i> <a href="#">{{$blog->user->name}}
+                                    {{$blog->user->lastname}}</a></span>
+                            <span><i class="fa fa-clock-o"></i>{{$blog->created_at}}</span>
+                            <!-- <span class="tag-meta">
                                 <i class="fa fa-folder-o"></i>
                                 <a href="#">Fashion</a>,
                                 <a href="#">WordPress</a>
-                            </span>
+                            </span> -->
                             <span>
                                 <i class="fa fa-tags"></i>
-                                <a href="#">fashion</a>,
-                                <a href="#">t-shirt</a>,
-                                <a href="#">white</a>
+                                <?php $ct=1?>
+                                @foreach(explode(',',$blog->Tags) as $row)
+                                @if($ct++>1),@endif
+                                <a>{{ $row }}</a>
+                                @endforeach
                             </span>
-                            <span><i class="fa fa-comments-o"></i> <a href="#">6 comments</a></span>
+                            <!-- <span><i class="fa fa-comments-o"></i> <a href="#">6 comments</a></span> -->
                         </div>
                         <div class="entry-content">
-                            <p>Donec vitae hendrerit arcu, sit amet faucibus nisl. Cras pretium arcu ex. Aenean
-                                posuere libero eu augue condimentum rhoncus. Praesent ornare tortor ac ante egestas
-                                hendrerit.</p>
-                            <p>Aliquam et metus pharetra, bibendum massa nec, fermentum odio. Nunc id leo ultrices,
-                                mollis ligula in, finibus tortor. Mauris eu dui ut lectus fermentum eleifend.
-                                Pellentesque faucibus sem ante, non malesuada odio varius nec. Suspendisse potenti.
-                                Proin consectetur aliquam odio nec fringilla. Sed interdum at justo in efficitur.
-                                Vivamus gravida volutpat sodales. Fusce ornare sit amet ligula condimentum sagittis.
-                            </p>
-                            <blockquote>
-                                <p>Quisque semper nunc vitae erat pellentesque, ac placerat arcu consectetur. In
-                                    venenatis elit ac ultrices convallis. Duis est nisi, tincidunt ac urna sed,
-                                    cursus blandit lectus. In ullamcorper sit amet ligula ut eleifend. Proin dictum
-                                    tempor ligula, ac feugiat metus. Sed finibus tortor eu scelerisque scelerisque.
-                                </p>
-                            </blockquote>
-                            <p>Aenean et tempor eros, vitae sollicitudin velit. Etiam varius enim nec quam tempor,
-                                sed efficitur ex ultrices. Phasellus pretium est vel dui vestibulum condimentum.
-                                Aenean nec suscipit nibh. Phasellus nec lacus id arcu facilisis elementum. Curabitur
-                                lobortis, elit ut elementum congue, erat ex bibendum odio, nec iaculis lacus sem non
-                                lorem. Duis suscipit metus ante, sed convallis quam posuere quis. Ut tincidunt
-                                eleifend odio, ac fringilla mi vehicula nec. Nunc vitae lacus eget lectus imperdiet
-                                tempus sed in dui. Nam molestie magna at risus consectetur, placerat suscipit justo
-                                dignissim. Sed vitae fringilla enim, nec ullamcorper arcu.</p>
-                            <p>Suspendisse turpis ipsum, tempus in nulla eu, posuere pharetra nibh. In dignissim
-                                vitae lorem non mollis. Praesent pretium tellus in tortor viverra condimentum.
-                                Nullam dignissim facilisis nisl, accumsan placerat justo ultricies vel. Vivamus
-                                finibus mi a neque pretium, ut convallis dui lacinia. Morbi a rutrum velit.
-                                Curabitur sagittis quam quis consectetur mattis. Aenean sit amet quam vel turpis
-                                interdum sagittis et eget neque. Nunc ante quam, luctus et neque a, interdum iaculis
-                                metus. Aliquam vel ante mattis, placerat orci id, vehicula quam. Suspendisse quis
-                                eros cursus, viverra urna sed, commodo mauris. Cras diam arcu, fringilla a sem
-                                condimentum, viverra facilisis nunc. Curabitur vitae orci id nulla maximus maximus.
-                                Nunc pulvinar sollicitudin molestie.</p>
+                            {{$blog->Description}}
                         </div>
-                        <div class="social-sharing">
+                        <!-- <div class="social-sharing">
                             <h3>Share this post</h3>
                             <div class="sharing-icon">
                                 <a href="#" data-toggle="tooltip" title="Facebook"><i class="fa fa-facebook"></i></a>
@@ -85,16 +55,16 @@
                                         class="fa fa-google-plus"></i></a>
                                 <a href="#" data-toggle="tooltip" title="Linkedin"><i class="fa fa-linkedin"></i></a>
                             </div>
-                        </div>
-                        <div class="author-info">
-                            <div class="author-avatar"><img src="img/blog/b18.jpg" alt="admin"></div>
+                        </div> -->
+                        <!-- <div class="author-info">
+                            <div class="author-avatar"><img src="../img/blog/b18.jpg" alt="admin"></div>
                             <div class="author-description">
                                 <h2>About the Author: <a href="#">admin</a></h2>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </article>
-                <div class="clear"></div>
+                <!-- <div class="clear"></div>
                 <div class="single-post-comments">
                     <div class="comments-area">
                         <div class="comments-heading">
@@ -105,7 +75,7 @@
                                 <li>
                                     <div class="comments-details">
                                         <div class="comments-list-img">
-                                            <img src="img/blog/b18.jpg" alt="post-author">
+                                            <img src="../img/blog/b18.jpg" alt="post-author">
                                         </div>
                                         <div class="comments-content-wrap">
                                             <span>
@@ -121,7 +91,7 @@
                                 <li class="threaded-comments">
                                     <div class="comments-details">
                                         <div class="comments-list-img">
-                                            <img src="img/blog/b18.jpg" alt="post-author">
+                                            <img src="../img/blog/b18.jpg" alt="post-author">
                                         </div>
                                         <div class="comments-content-wrap">
                                             <span>
@@ -138,7 +108,7 @@
                                 <li>
                                     <div class="comments-details">
                                         <div class="comments-list-img">
-                                            <img src="img/blog/b18.jpg" alt="post-author">
+                                            <img src="../img/blog/b18.jpg" alt="post-author">
                                         </div>
                                         <div class="comments-content-wrap">
                                             <span>
@@ -156,7 +126,7 @@
                                 <li class="threaded-comments">
                                     <div class="comments-details">
                                         <div class="comments-list-img">
-                                            <img src="img/blog/b18.jpg" alt="post-author">
+                                            <img src="../img/blog/b18.jpg" alt="post-author">
                                         </div>
                                         <div class="comments-content-wrap">
                                             <span>
@@ -173,7 +143,7 @@
                                 <li>
                                     <div class="comments-details">
                                         <div class="comments-list-img">
-                                            <img src="img/blog/b18.jpg" alt="post-author">
+                                            <img src="../img/blog/b18.jpg" alt="post-author">
                                         </div>
                                         <div class="comments-content-wrap">
                                             <span>
@@ -191,7 +161,7 @@
                                 <li class="threaded-comments">
                                     <div class="comments-details">
                                         <div class="comments-list-img">
-                                            <img src="img/blog/b18.jpg" alt="post-author">
+                                            <img src="../img/blog/b18.jpg" alt="post-author">
                                         </div>
                                         <div class="comments-content-wrap">
                                             <span>
@@ -234,7 +204,7 @@
                             </div>
                         </form>
                     </div>
-                </div><!-- single-blog end -->
+                </div> -->
 
             </div>
         </div>

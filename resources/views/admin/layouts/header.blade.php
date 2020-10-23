@@ -27,39 +27,7 @@
                                         </div>
                                     </div>
                                 </a>
-                                <a href="#" class="list-group-item list-group-item-action">
-                                    <div class="notification-info">
-                                        <div class="notification-list-user-img"><img src="/img/about/ab3.jpg" alt=""
-                                                class="user-avatar-md rounded-circle"></div>
-                                        <div class="notification-list-user-block"><span
-                                                class="notification-list-user-name">John Abraham</span>is
-                                            now following you
-                                            <div class="notification-date">2 days ago</div>
-                                        </div>
-                                    </div>
-                                </a>
-                                <a href="#" class="list-group-item list-group-item-action">
-                                    <div class="notification-info">
-                                        <div class="notification-list-user-img"><img src="/img/about/team1.jpg" alt=""
-                                                class="user-avatar-md rounded-circle"></div>
-                                        <div class="notification-list-user-block"><span
-                                                class="notification-list-user-name">Monaan Pechi</span> is
-                                            watching your main repository
-                                            <div class="notification-date">2 min ago</div>
-                                        </div>
-                                    </div>
-                                </a>
-                                <a href="#" class="list-group-item list-group-item-action">
-                                    <div class="notification-info">
-                                        <div class="notification-list-user-img"><img src="/img/about/team2.jpg" alt=""
-                                                class="user-avatar-md rounded-circle"></div>
-                                        <div class="notification-list-user-block"><span
-                                                class="notification-list-user-name">Jessica
-                                                Caruso</span>accepted your invitation to join the team.
-                                            <div class="notification-date">2 min ago</div>
-                                        </div>
-                                    </div>
-                                </a>
+
                             </div>
                         </div>
                     </li>
@@ -71,17 +39,22 @@
 
             <li class="nav-item dropdown nav-user">
                 <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false"><img src="/img/about/ab1.jpg" alt=""
-                        class="user-avatar-md rounded-circle"></a>
+                    aria-haspopup="true" aria-expanded="false"><img src="/upload/image/users/{{Auth::user()->photo}}"
+                        alt="" class="user-avatar-md rounded-circle"></a>
                 <div class="dropdown-menu dropdown-menu-right nav-user-dropdown"
                     aria-labelledby="navbarDropdownMenuLink2">
                     <div class="nav-user-info">
-                        <h5 class="mb-0 text-white nav-user-name">Amin Syahi </h5>
-                        <span class="status"></span><span class="ml-2">Developer</span>
+                        <h5 class="mb-0 text-white nav-user-name">{{Auth::user()->name}} {{Auth::user()->lastname}}</h5>
+                        <span class="status"></span><span class="ml-2">{{Auth::user()->Role->name}}</span>
                     </div>
-                    <a class="dropdown-item" href="{{url('/Admin/profile')}}"><i
+                    <a class="dropdown-item" href="{{route('profile.edit',[Auth::user()->id])}}"><i
                             class="fas fa-user mr-2"></i>Account</a>
-                    <a class="dropdown-item" href="#"><i class="fas fa-power-off mr-2"></i>Logout</a>
+                    <a class="dropdown-item" href="#" onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();"><i
+                            class="fas fa-power-off mr-2"></i>Logout</a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                        @csrf
+                    </form>
                 </div>
             </li>
         </ul>

@@ -28,80 +28,67 @@
                                     <th>photo</th>
                                     <th>First name</th>
                                     <th>Last name</th>
-                                    <th>Age</th>
                                     <th>Gender</td>
                                     <th>Role</th>
-                                    <th>Start create</th>
+                                    <th>register date</th>
                                     <th>Action</th>
 
                                 </tr>
                             </thead>
                             <tbody>
+                                <?php $i=1;?>
+
+                                @foreach($users as $user)
                                 <tr>
-                                    <th>1</th>
+                                    <th>{{$i++}}</th>
                                     <td>
                                         <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2"
                                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <img src="/img/about/ab1.jpg" alt="" class="user-avatar-md rounded-circle">
+                                            <img src="/upload/image/users/{{$user->photo}}" alt=""
+                                                class="user-avatar-md rounded-circle">
                                         </a>
                                     </td>
-                                    <td>amin</td>
-                                    <td>Syahi</td>
-                                    <td>29</td>
-                                    <td><i class="fa fa-mars" aria-hidden="true" style='font-size:24px;'></i>
-                                    </td>
-                                    <td>Admin</td>
-                                    <td>1399/07/03</td>
+                                    <td>{{$user->name}}</td>
+                                    <td>{{$user->lastname}}</td>
                                     <td>
-                                        <a class="btn btn-default" href="{{url('Admin/Users/edit')}}"
-                                            aria-label="Settings">
-                                            <i class="fa fa-pencil-alt" aria-hidden="true" style='color:green'></i>
-                                        </a>
-                                        <a class="btn btn-default" onclick="deleterow('{{url('/Admin/Users/edit')}}')"
-                                            href="#" aria-label="Settings">
-                                            <i class="fa fa-trash" aria-hidden="true"></i>
-                                        </a>
-                                    </td>
-                                </tr>
+                                        @if($user->gender == 1)
+                                        <i class="fas fa-male" aria-hidden="true" style='font-size:24px;'></i>
+                                        @else
+                                        <i class="fas fa-female" aria-hidden="true" style='font-size:24px;'>
+                                            @endif
 
-                                <tr>
-                                    <th>2</th>
+                                    </td><!-- gender -->
+                                    <td>{{$user->Role->name}}</td><!-- role -->
+                                    <td>{{$user->created_at}}</td><!-- date register -->
                                     <td>
-                                        <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2"
-                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img
-                                                src="/img/about/ab2.jpg" alt=""
-                                                class="user-avatar-md rounded-circle"></a>
-                                    </td>
-                                    <td>yasamin</td>
-                                    <td>omidi</td>
-                                    <td>25</td>
-                                    <td><i class="fa fa-venus" aria-hidden="true" style='font-size:24px;'></i>
-                                    </td>
-                                    <td>Admin</td>
-                                    <td>1399/07/04</td>
-                                    <td>
-                                        <a class="btn btn-default" href="{{url('Admin/Users/edit')}}"
+                                        @if(Auth::user()->RoleEditor() && Auth::user()->id != $user->id)
+                                        <a class="btn btn-default" href="{{route('Users.edit',[$user])}}"
                                             aria-label="Settings">
                                             <i class="fa fa-pencil-alt" aria-hidden="true" style='color:green'></i>
                                         </a>
-                                        <a class="btn btn-default" onclick="deleterow('{{url('/Admin/Users/edit')}}')"
-                                            href="#" aria-label="Settings">
+
+                                        <a class="btn btn-default"
+                                            onclick="deleterow('{{route('Users.destroy',[$user])}}')" href="#"
+                                            aria-label="Settings">
                                             <i class="fa fa-trash" aria-hidden="true"></i>
                                         </a>
+                                        @endif
                                     </td>
                                 </tr>
+                                @endforeach
+
                             </tbody>
 
                         </table>
 
-                        <div class="form-group row">
+                        <!--div class="form-group row">
                             <div class="text-right col-md-12">
                                 <p class="btn-position">
                                     <button type="submit" name="button" value="newUser"
                                         class="btn btn-space btn-warning">New User</button>
                                 </p>
                             </div>
-                        </div>
+                        </div-->
                     </div>
                 </div>
             </div>

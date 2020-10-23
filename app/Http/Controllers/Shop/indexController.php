@@ -13,8 +13,6 @@ use App\Slider;
 class indexController extends Controller
 {
 
-    
-
     /**
      * Display a listing of the resource.
      *
@@ -87,10 +85,27 @@ class indexController extends Controller
         return view('shop.ProductList', compact('menus', 'DataShop','products'));
     }
 
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+
+    public function ProductListShow($id)
+    {
+
+        $products = Product::latest()->where('categoryId',$id)->orderBy('id', 'DESC')->limit(5)->get();
+        $DataShop = $this->getDataShop();
+        $menus = Category::with('getChild')->where('parentId', '0')->get();
+
+        return view('shop.ProductList', compact('menus', 'DataShop','products'));
+    }
+
     public function SingleProduct($id)
     {
         $menus = Category::with('getChild')->where('parentId', '0')->get();
-        $Product = Product::find($id)->get();
+        $Product = Product::find($id);
         $DataShop = $this->getDataShop();
 
         return view('shop.SingleProduct', compact('menus', 'Product', 'DataShop'));

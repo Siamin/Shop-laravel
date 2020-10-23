@@ -30,12 +30,13 @@ class BlogShopController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show( $id)
     {
+        
         $menus = Category::with('getChild')->where('parentId', '0')->get();
-        $blog = Blog::where('id', $id)->get();
+        $blog = Blog::find($id);
         $DataShop = $this->getDataShop();
-
+        
         return view('shop.blog', compact('menus', 'blog', 'DataShop'));
 
     }

@@ -58,7 +58,7 @@
                                         <h6>{{$blog->updated_at}}</h6>
                                     </div>
                                     <p>{{$blog->getDescription()}}
-                                        <span><a href="{{route('ShopBlog.show',[$blog])}}">Read More</a></span>
+                                        <span><a href="{{route('ShopBlog.show',[$blog->id])}}">Read More</a></span>
                                     </p>
                                     <!-- <h5>Posted By Usdtheme</h5> -->
                                 </div>

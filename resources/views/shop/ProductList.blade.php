@@ -83,7 +83,9 @@
                                                 </div>
                                             </div>
                                             <div class="product-content">
-                                                <h5 class="product-name"><a href="#">{{$product->title}}</a></h5>
+                                                <h5 class="product-name"><a
+                                                        href="{{Route('Product.show',[$product->id])}}">{{$product->title}}</a>
+                                                </h5>
                                                 <!-- <div class="pro-rating no-rating">
                                                     <a href="#"><i class="fa fa-star-o"></i></a>
                                                     <a href="#"><i class="fa fa-star-o"></i></a>
@@ -139,7 +141,9 @@
                                         <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 ">
                                             <div class="product-list shop-review">
                                                 <div class="product-name">
-                                                    <h3><a href="#">{{$product->title}}</a></h3>
+                                                    <h3><a
+                                                            href="{{Route('Product.show',[$product->id])}}">{{$product->title}}</a>
+                                                    </h3>
                                                 </div>
                                                 <div class="product-reveiw">
                                                     <p>{{$product->description}}</p>

@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="shortcut icon" type="../image/x-icon" href="/favicon.ico">
 
     <!-- google fonts here -->
     <link href='https://fonts.googleapis.com/css?family=Lato:400,400italic,700' rel='stylesheet' type='text/css'>
@@ -19,31 +19,31 @@
     <!-- all css here -->
 
     <!-- bootstrap v3.3.6 css -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
     <!-- nivo-slider css -->
-    <link rel="stylesheet" href="lib/css/nivo-slider.css" type="text/css" />
-    <link rel="stylesheet" href="lib/css/preview.css" type="text/css" media="screen" />
-    <link rel="stylesheet" href="lib/css/style.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="../lib/css/nivo-slider.css" type="text/css" />
+    <link rel="stylesheet" href="../lib/css/preview.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="../lib/css/style.css" type="text/css" media="screen" />
     <!-- jquery-ui.min css -->
-    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" href="../css/jquery-ui.min.css">
     <!-- meanmenu css -->
-    <link rel="stylesheet" href="css/meanmenu.min.css">
+    <link rel="stylesheet" href="../css/meanmenu.min.css">
     <!-- animate css -->
-    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="../css/animate.css">
     <!-- owl.carousel css -->
-    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="../css/owl.carousel.css">
     <!-- font-awesome css -->
-    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/font-awesome.min.css">
     <!-- simpleLens css -->
-    <link rel="stylesheet" href="css/jquery.simpleGallery.css">
-    <link rel="stylesheet" href="css/jquery.simpleLens.css">
+    <link rel="stylesheet" href="../css/jquery.simpleGallery.css">
+    <link rel="stylesheet" href="../css/jquery.simpleLens.css">
     <!-- style css -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
     <!-- responsive css -->
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="../css/responsive.css">
 
     <!-- modernizr css -->
-    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="../js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 
 <body>
@@ -180,7 +180,7 @@
                     <div class="row">
                         <div class="col-lg-12 col-md-12 col-sm-12">
                             <!-- main-menu start -->
-                            <div class="main-menu">
+                            <div style="direction:rtl;" class="main-menu">
                                 <nav>
                                     <ul>
                                         <li><a href="{{url('/')}}">{{ __('صفحه اصلی') }}</a></li>
@@ -195,7 +195,8 @@
                                                     @if($menu->getChild->count()>0)
 
                                                     @foreach($menu->getChild as $child)
-                                                    <a href="{{url('/ProductList')}}">{{$child->name}}</a>
+                                                    <a
+                                                        href="{{route('ProductList.show',[$child->id])}}">{{$child->name}}</a>
                                                     @endforeach
 
                                                     @endif

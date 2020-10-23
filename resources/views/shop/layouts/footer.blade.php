@@ -91,7 +91,7 @@
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                     <div class="payment-system">
                         <a href="#">
-                            <img src="img/footer/payment.png" alt="">
+                            <img src="../img/footer/payment.png" alt="">
                         </a>
                     </div>
                 </div>
@@ -189,29 +189,29 @@
 <!-- all js here -->
 
 <!-- jquery latest version -->
-<script src="js/vendor/jquery-1.12.4.min.js"></script>
+<script src="../js/vendor/jquery-1.12.4.min.js"></script>
 <!-- bootstrap js -->
-<script src="js/bootstrap.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
 <!-- owl.carousel js -->
-<script src="js/owl.carousel.min.js"></script>
+<script src="../js/owl.carousel.min.js"></script>
 <!-- jquery-ui.min js -->
-<script src="js/jquery-ui.min.js"></script>
+<script src="../js/jquery-ui.min.js"></script>
 <!-- meanmenu js -->
-<script src="js/jquery.meanmenu.js"></script>
+<script src="../js/jquery.meanmenu.js"></script>
 <!-- countdown js -->
-<script src="js/jquery.countdown.min.js"></script>
+<script src="../js/jquery.countdown.min.js"></script>
 <!-- Simple Lence JS -->
-<script src="js/jquery.simpleGallery.min.js"></script>
-<script src="js/jquery.simpleLens.min.js"></script>
+<script src="../js/jquery.simpleGallery.min.js"></script>
+<script src="../js/jquery.simpleLens.min.js"></script>
 <!-- wow js -->
-<script src="js/wow.min.js"></script>
+<script src="../js/wow.min.js"></script>
 <!-- Nivo slider js -->
-<script src="lib/js/jquery.nivo.slider.js" type="text/javascript"></script>
-<script src="lib/home.js" type="text/javascript"></script>
+<script src="../lib/js/jquery.nivo.slider.js" type="text/javascript"></script>
+<script src="../lib/home.js" type="text/javascript"></script>
 <!-- plugins js -->
-<script src="js/plugins.js"></script>
+<script src="../js/plugins.js"></script>
 <!-- main js -->
-<script src="js/main.js"></script>
+<script src="../js/main.js"></script>
 
 <!-- Google Map js -->
 <script src="https://maps.googleapis.com/maps/api/js"></script>
@@ -234,7 +234,7 @@ function initialize() {
     var marker = new google.maps.Marker({
         position: map.getCenter(),
         animation: google.maps.Animation.BOUNCE,
-        icon: 'img/logo/map-marker.png',
+        icon: '../img/logo/map-marker.png',
         map: map
     });
 

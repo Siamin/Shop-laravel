@@ -63,7 +63,8 @@
                             </div>
                         </div>
                         <div class="product-content">
-                            <h5 class="product-name"><a href="#">{{$detile->title}}</a></h5>
+                            <h5 class="product-name"><a
+                                    href="{{Route('Product.show',[$detile->id])}}">{{$detile->title}}</a></h5>
                             <!-- <div class="pro-rating no-rating">
                                 <a href="#"><i class="fa fa-star-o"></i></a>
                                 <a href="#"><i class="fa fa-star-o"></i></a>
