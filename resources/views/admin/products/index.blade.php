@@ -50,7 +50,7 @@
                                     <td>{{$product->title}}</td>
                                     <td>{{$product->count}}</td>
                                     <td>{{$product->price}}</td>
-                                    <td>{{$product->categoryId}}</td>
+                                    <td>{{$product->CategoryModel->name}}</td>
                                     <td>{{$product->created_at}}</td>
                                     <td>
                                         <a class="btn btn-default" href="{{route('product.edit',[$product])}}"

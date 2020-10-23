@@ -42,11 +42,12 @@
                                 <tr>
                                     <th>{{$i++}}</th>
                                     <td>
-                                        <img src="/upload/image/blog/{{$Blog->Image}}" style="width: 100px;height: 100px;" alt="">
+                                        <img src="/upload/image/blog/{{$Blog->Image}}"
+                                            style="width: 100px;height: 100px;" alt="">
                                     </td>
                                     <td>{{$Blog->Title}}</td>
                                     <!-- <td>{{$Blog->Description}}</td> -->
-                                    <td>{{$Blog->CategorId}}</td>
+                                    <td>{{$Blog->CategoryModel->name}}</td>
                                     <td>{{$Blog->Tags}}</td>
                                     <td>
                                         @if($Blog->Status=='active')

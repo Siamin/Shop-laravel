@@ -105,7 +105,7 @@ class indexController extends Controller
     public function SingleProduct($id)
     {
         $menus = Category::with('getChild')->where('parentId', '0')->get();
-        $Product = Product::find($id)->get();
+        $Product = Product::find($id);
         $DataShop = $this->getDataShop();
 
         return view('shop.SingleProduct', compact('menus', 'Product', 'DataShop'));

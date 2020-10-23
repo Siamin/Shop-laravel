@@ -10,6 +10,6 @@ class Product extends Model
 
 
         public function CategoryModel(){
-        return $this->blongsTo('App\Category');
-        }
+        return $this->belongsTo('App\Category', 'categoryId');
+        }   
 }
